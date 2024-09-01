@@ -32,5 +32,10 @@ python src/main.py project_euler 1
 ## Development
 
 ```shell
+# Adding dependencies
+conda install PACKAGE
 conda env export --no-builds | grep -v "prefix" > environment.yml
+
+# Testing
+pytest
 ```

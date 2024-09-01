@@ -13,9 +13,10 @@ def main():
 
     module_name = f"{args.exercise}.problem_{args.problem_number}"
     if importlib.util.find_spec(module_name):
-        import_module(f"{args.exercise}.problem_{args.problem_number}")
+        problem = import_module(f"{args.exercise}.problem_{args.problem_number}")
+        problem.solution()
     else:
-        print("No solution yet.")
+        print(f"No solution for {args.exercise} problem {args.problem_number} yet.")
 
 
 if __name__ == '__main__':
