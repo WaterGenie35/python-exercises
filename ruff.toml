@@ -1,0 +1,29 @@
+fix = true
+line-length = 120
+
+[lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+]
+fixable = ["ALL"]
+
+[format]
+# Quote rules:
+#  - Use single-quote for magic strings
+#      - dict keys, enums, etc.
+#  - Use double-quote for non-magic string
+#      - print, logging, description, etc.
+#      - string content (e.g. the number of escaped double quotes in this case)
+#        should not affect the format
+quote-style = "preserve"
