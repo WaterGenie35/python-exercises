@@ -1,3 +1,4 @@
+# TODO: optimize
 def solution():
     """
     Solution to Project Euler problem 5

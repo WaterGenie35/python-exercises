@@ -1,6 +1,7 @@
 from utils.math import is_prime
 
 
+# TODO: optimize
 def solution():
     """
     Solution to Project Euler problem 10

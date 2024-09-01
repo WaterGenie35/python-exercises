@@ -1,4 +1,4 @@
-from utils.math import is_prime, nth_prime
+from utils.math import choose, divisors_of, is_prime, nth_prime
 
 
 def test_is_prime():
@@ -22,3 +22,32 @@ def test_nth_prime():
     assert nth_prime(2) == 3
     assert nth_prime(283) == 1_847
     # assert nth_prime(503_921) == 7_430_947
+
+
+def test_divisors_of():
+    assert divisors_of(1) == [1]
+    assert divisors_of(28) == [1, 2, 4, 7, 14, 28]
+    assert divisors_of(33_907_329) == [
+        1,
+        3,
+        9,
+        27,
+        81,
+        647,
+        1_941,
+        5_823,
+        17_469,
+        52_407,
+        418_609,
+        1_255_827,
+        3_767_481,
+        11_302_443,
+        33_907_329,
+    ]
+
+
+def test_choose():
+    assert choose(1, 1) == 1
+    assert choose(4, 2) == 6
+    assert choose(235, 1) == 235
+    assert choose(35, 17) == 4_537_567_650
