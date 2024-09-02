@@ -114,5 +114,9 @@ def solution():
     print(first_n_digits_of_sum(NUMS, 10))
 
 
+def test_solution():
+    assert first_n_digits_of_sum(NUMS, 10) == [5, 5, 3, 7, 3, 7, 6, 2, 3, 0]
+
+
 def first_n_digits_of_sum(nums: List[int], num_digits: int) -> List[int]:
     return [int(digit_repr) for digit_repr in str(sum(nums))[:num_digits]]

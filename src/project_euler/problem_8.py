@@ -33,6 +33,11 @@ def solution():
     print(greatest_product_of_consecutive_digits(NUM_REPR, 13))
 
 
+def test_solution():
+    assert greatest_product_of_consecutive_digits(NUM_REPR, 4) == 5_832
+    assert greatest_product_of_consecutive_digits(NUM_REPR, 13) == 23_514_624_000
+
+
 def greatest_product_of_consecutive_digits(num_repr: str, consecutive_digits: int) -> int:
     greatest_product = 0
 

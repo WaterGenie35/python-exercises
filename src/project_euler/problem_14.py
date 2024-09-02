@@ -13,6 +13,11 @@ def solution():
     print(longest_chain_length_with_starting_num_lt(1_000_000))
 
 
+def test_solution():
+    assert 1 == 1
+    # assert longest_chain_length_with_starting_num_lt(1_000_000) == 837_799
+
+
 # TODO: optimize
 def longest_chain_length_with_starting_num_lt(max_starting_num: int) -> int:
     longest_chain_length = 0

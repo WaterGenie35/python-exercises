@@ -13,6 +13,11 @@ def solution():
     print(num_lattice_paths(20, 20))
 
 
+def test_solution():
+    assert num_lattice_paths(2, 2) == 6
+    assert num_lattice_paths(20, 20) == 137_846_528_820
+
+
 def num_lattice_paths(width: int, height: int) -> int:
     # There are width + height times in which we must pick between moving
     # right or down.

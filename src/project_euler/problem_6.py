@@ -9,6 +9,11 @@ def solution():
     print(difference_sum_of_squares_and_square_of_sum_lte(100))
 
 
+def test_solution():
+    assert difference_sum_of_squares_and_square_of_sum_lte(10) == 2_640
+    assert difference_sum_of_squares_and_square_of_sum_lte(100) == 25_164_150
+
+
 def difference_sum_of_squares_and_square_of_sum_lte(max: int) -> int:
     sum_of_squares = sum(n**2 for n in range(1, max + 1))
     square_of_sum = sum(n for n in range(1, max + 1)) ** 2

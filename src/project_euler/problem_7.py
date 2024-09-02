@@ -10,3 +10,7 @@ def solution():
     Start the prime number with 2.
     """
     print(nth_prime(10_001))
+
+
+def test_solution():
+    assert nth_prime(10_001) == 104_743

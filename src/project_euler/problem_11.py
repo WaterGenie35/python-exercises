@@ -35,6 +35,10 @@ def solution():
     print(greatest_product_of_adjacent_numbers(GRID, 4))
 
 
+def test_solution():
+    assert greatest_product_of_adjacent_numbers(GRID, 4) == 70_600_674
+
+
 def greatest_product_of_adjacent_numbers(grid: List[List[int]], num_adjacent: int) -> int:
     greatest_product = None
     num_rows = len(grid)

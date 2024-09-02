@@ -11,6 +11,11 @@ def solution():
     print(first_triangle_number_with_num_divisors_gt(500))
 
 
+def test_solution():
+    assert first_triangle_number_with_num_divisors_gt(5) == 28
+    # assert first_triangle_number_with_num_divisors_gt(500) == 76_576_500
+
+
 def first_triangle_number_with_num_divisors_gt(num_divisors: int) -> int:
     triangle_number = 0
     head = 1

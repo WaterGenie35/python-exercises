@@ -13,6 +13,10 @@ def solution():
     print(product_of_pythagorean_with_triplet_sum(1_000))
 
 
+def test_solution():
+    assert product_of_pythagorean_with_triplet_sum(1_000) == 31_875_000
+
+
 def product_of_pythagorean_with_triplet_sum(triplet_sum: int) -> int:
     a = 1
     product = None

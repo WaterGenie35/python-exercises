@@ -9,6 +9,10 @@ def solution():
     print(sum_of_even_fibonacci_lt(4_000_000))
 
 
+def test_solution():
+    assert sum_of_even_fibonacci_lt(4_000_000) == 4_613_730
+
+
 def sum_of_even_fibonacci_lt(max_term: int) -> int:
     # Let e(n) be the nth ven Fibonacci term
     # e(n) = f(3n-1) by induction on P(k): f(3k-2) is odd and f(3k-1) is even

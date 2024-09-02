@@ -8,6 +8,10 @@ def solution():
     print(sum_of_digits(2**1_000))
 
 
+def test_solution():
+    assert sum_of_digits(2**1_000) == 1_366
+
+
 def sum_of_digits(number: int) -> int:
     s = 0
     n = number

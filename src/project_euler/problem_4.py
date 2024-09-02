@@ -11,6 +11,11 @@ def solution():
     print(largest_palindrome_product_from_digits(3))
 
 
+def test_solution():
+    assert largest_palindrome_product_from_digits(2) == 9009
+    assert largest_palindrome_product_from_digits(3) == 906609
+
+
 def largest_palindrome_product_from_digits(max_digits: int) -> int:
     largest_palindrome_product = None
 

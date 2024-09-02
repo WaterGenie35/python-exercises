@@ -9,6 +9,11 @@ def solution():
     print(smallest_number_divisible_lte(20))
 
 
+def test_solution():
+    assert smallest_number_divisible_lte(10) == 2_520
+    # assert smallest_number_divisible_lte(20) == 232_792_560
+
+
 def smallest_number_divisible_lte(max_divisor: int) -> int:
     n = max_divisor
 
