@@ -31,11 +31,16 @@ python src/main.py project_euler 1
 
 ## Development
 
+### Dependencies
 ```shell
-# Adding dependencies
 conda install PACKAGE
 conda env export --no-builds | grep -v "prefix" > environment.yml
+```
 
-# Testing
+### Testing
+```shell
 pytest
 ```
+
+### Documenting
+- Save raw project euler post content before submitting since they are non-permanent.
