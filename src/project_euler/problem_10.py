@@ -1,7 +1,6 @@
-from utils.math import is_prime
+from utils.math import primes_lte
 
 
-# TODO: optimize
 def solution():
     """
     Solution to Project Euler problem 10
@@ -15,17 +14,8 @@ def solution():
 
 def test_solution():
     assert sum_of_primes_lt(10) == 17
-    # assert sum_of_primes_lt(2_000_000) == 142_913_828_922
+    assert sum_of_primes_lt(2_000_000) == 142_913_828_922
 
 
 def sum_of_primes_lt(max_num: int) -> int:
-    sum_of_primes = 0
-    head = 2
-    while head < max_num:
-        if is_prime(head):
-            sum_of_primes += head
-        if head == 2:
-            head += 1
-        else:
-            head += 2
-    return sum_of_primes
+    return sum(primes_lte(max_num - 1))
