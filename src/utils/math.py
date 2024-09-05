@@ -64,7 +64,7 @@ def primes_lte(n: int) -> List[int]:
 
 
 # TODO: optimize? see problem 12
-def divisors_of(n: int) -> List[int]:
+def factors_of(n: int) -> List[int]:
     divisors = []
     pairs = []
     head = 1

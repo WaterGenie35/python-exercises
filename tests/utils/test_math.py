@@ -1,5 +1,5 @@
 from project_euler.problem_16 import sum_of_digits
-from utils.math import choose, divisors_of, is_prime, nth_prime, primes_lte
+from utils.math import choose, factors_of, is_prime, nth_prime, primes_lte
 
 
 def test_is_prime():
@@ -33,10 +33,10 @@ def test_primes_lte():
     assert primes_lte(75) == [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73]
 
 
-def test_divisors_of():
-    assert divisors_of(1) == [1]
-    assert divisors_of(28) == [1, 2, 4, 7, 14, 28]
-    assert divisors_of(33_907_329) == [
+def test_factors_of():
+    assert factors_of(1) == [1]
+    assert factors_of(28) == [1, 2, 4, 7, 14, 28]
+    assert factors_of(33_907_329) == [
         1,
         3,
         9,
