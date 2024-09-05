@@ -85,3 +85,12 @@ def choose(n: int, k: int) -> int:
     for i in range(1, bound):
         product *= (n + 1.0 - i) / i
     return round(product)
+
+
+def sum_of_digits(n: int) -> int:
+    s = 0
+    remaining = n
+    while remaining > 0:
+        s += remaining % 10
+        remaining //= 10
+    return s

@@ -1,3 +1,6 @@
+from utils.math import sum_of_digits
+
+
 def solution():
     """
     Solution to Project Euler problem 16
@@ -10,12 +13,3 @@ def solution():
 
 def test_solution():
     assert sum_of_digits(2**1_000) == 1_366
-
-
-def sum_of_digits(number: int) -> int:
-    s = 0
-    n = number
-    while n > 0:
-        s += n % 10
-        n //= 10
-    return s

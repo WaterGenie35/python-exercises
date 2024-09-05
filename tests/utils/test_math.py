@@ -1,3 +1,4 @@
+from project_euler.problem_16 import sum_of_digits
 from utils.math import choose, divisors_of, is_prime, nth_prime, primes_lte
 
 
@@ -59,3 +60,9 @@ def test_choose():
     assert choose(4, 2) == 6
     assert choose(235, 1) == 235
     assert choose(35, 17) == 4_537_567_650
+
+
+def test_sum_of_digits():
+    assert sum_of_digits(0) == 0
+    assert sum_of_digits(6) == 6
+    assert sum_of_digits(1_023_009) == 15
