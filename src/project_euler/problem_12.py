@@ -1,4 +1,4 @@
-from utils.math import factors_of
+from utils.math import num_factors
 
 
 def solution():
@@ -16,12 +16,11 @@ def test_solution():
     assert first_triangle_number_with_num_factors_gt(500) == 76_576_500
 
 
-# 2.71s test
 def first_triangle_number_with_num_factors_gt(num_divisors: int) -> int:
     triangle_number = 0
     head = 1
     while True:
         triangle_number += head
-        if len(factors_of(triangle_number)) > num_divisors:
+        if num_factors(triangle_number) > num_divisors:
             return triangle_number
         head += 1

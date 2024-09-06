@@ -1,5 +1,7 @@
 from typing import List
 
+from utils.prime_table import PRIMES
+
 
 def is_prime(n: int) -> bool:
     # All primes > 3 can be written as 6k+-1 for some positive k
@@ -63,7 +65,6 @@ def primes_lte(n: int) -> List[int]:
     return primes
 
 
-# TODO: optimize? see problem 12
 def factors_of(n: int) -> List[int]:
     divisors = []
     pairs = []
@@ -71,12 +72,32 @@ def factors_of(n: int) -> List[int]:
     while head**2 <= n:
         if n % head == 0:
             divisors.append(head)
-            factor_pair = n / head
+            factor_pair = n // head
             if head != factor_pair:
                 pairs.append(factor_pair)
         head += 1
     divisors.extend(reversed(pairs))
     return divisors
+
+
+def num_factors(n: int) -> int:
+    # See https://en.wikipedia.org/wiki/Divisor_function
+    if n in PRIMES or is_prime(n):
+        return 2
+
+    num = 1
+    # Use pre-computed table of primes as long as n is sufficiently small
+    primes = PRIMES if n <= PRIMES[-1] ** 2 else primes_lte(n)
+    remaining = n
+    for prime in primes:
+        exponent = 0
+        while remaining % prime == 0:
+            exponent += 1
+            remaining //= prime
+        num *= exponent + 1
+        if prime**2 > n:
+            break
+    return num
 
 
 def choose(n: int, k: int) -> int:
