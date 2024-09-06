@@ -13,6 +13,7 @@ def solution():
 
 def test_solution():
     assert first_triangle_number_with_num_factors_gt(5) == 28
+    # TODO: still need to optimize this (test ~0.75s)
     assert first_triangle_number_with_num_factors_gt(500) == 76_576_500
 
 

@@ -14,15 +14,21 @@ def solution():
 
 
 def test_solution():
-    assert 1 == 1
-    # assert longest_chain_length_with_starting_num_lt(1_000_000) == 837_799
+    assert longest_chain_length_with_starting_num_lt(1_000_000) == 837_799
 
 
-# TODO: optimize
 def longest_chain_length_with_starting_num_lt(max_starting_num: int) -> int:
+    # With:
+    #   - memory optimization (trade space for time)
+    #   - chain length of 2k (even) = 1 + chain length of k,
+    #     so we can start the search from max_starting_num // 2
+    #   - n odd -> 3n+1 even, so -> (3n+1)/2,
+    #     so chain length of odd n is 2 + chain length of (3n+1)/2
     longest_chain_length = 0
+    starting_num = max_starting_num // 2
     starting_num = 1
     starting_num_with_longest_chain = starting_num
+    memory = {}
     while starting_num < max_starting_num:
         chain_length = 1
         head = starting_num
@@ -30,9 +36,14 @@ def longest_chain_length_with_starting_num_lt(max_starting_num: int) -> int:
         while head != 1:
             if head % 2 == 0:
                 head /= 2
+                chain_length += 1
             else:
-                head = (3 * head) + 1
-            chain_length += 1
+                head = ((3 * head) + 1) // 2
+                chain_length += 2
+            if head in memory:
+                chain_length += memory[head]
+                break
+        memory[starting_num] = chain_length
         if chain_length > longest_chain_length:
             longest_chain_length = chain_length
             starting_num_with_longest_chain = starting_num
