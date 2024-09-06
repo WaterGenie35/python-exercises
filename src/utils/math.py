@@ -100,6 +100,18 @@ def num_factors(n: int) -> int:
     return num
 
 
+def is_amicable(n: int) -> int:
+    if n == 1:
+        return False
+    proper_factors = factors_of(n)[:-1]
+
+    pair = sum(proper_factors)
+    if pair == 1 or n == pair:
+        return False
+    pair_proper_factors = factors_of(pair)[:-1]
+    return n == sum(pair_proper_factors)
+
+
 def choose(n: int, k: int) -> int:
     product = 1
     bound = min(k, n - k) + 1

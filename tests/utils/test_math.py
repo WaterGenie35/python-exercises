@@ -1,5 +1,5 @@
 from project_euler.problem_16 import sum_of_digits
-from utils.math import choose, factors_of, is_prime, nth_prime, num_factors, primes_lte
+from utils.math import choose, factors_of, is_amicable, is_prime, nth_prime, num_factors, primes_lte
 
 
 def test_is_prime():
@@ -60,6 +60,14 @@ def test_num_factors():
     assert num_factors(28) == 6
     assert num_factors(33_907_329) == 15
     assert num_factors(76_576_500) == 576
+
+
+def test_is_amicable():
+    assert is_amicable(220)
+    assert is_amicable(284)
+
+    assert not is_amicable(1)
+    assert not is_amicable(6)
 
 
 def test_choose():
