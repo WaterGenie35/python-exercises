@@ -100,6 +100,21 @@ def num_factors(n: int) -> int:
     return num
 
 
+def greatest_common_factor(a: int, b: int) -> int:
+    if a == 0 and b == 0:
+        return 0
+    if a == 0 or b == 0:
+        return max(abs(a), abs(b))
+
+    head = min(a, b)
+    remainder = max(a, b) % head
+    while remainder > 0:
+        tmp = max(head, remainder)
+        head = min(head, remainder)
+        remainder = tmp % head
+    return head
+
+
 def is_amicable(n: int) -> int:
     if n == 1:
         return False

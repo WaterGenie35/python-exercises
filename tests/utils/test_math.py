@@ -1,5 +1,14 @@
 from project_euler.problem_16 import sum_of_digits
-from utils.math import choose, factors_of, is_amicable, is_prime, nth_prime, num_factors, primes_lte
+from utils.math import (
+    choose,
+    factors_of,
+    greatest_common_factor,
+    is_amicable,
+    is_prime,
+    nth_prime,
+    num_factors,
+    primes_lte,
+)
 
 
 def test_is_prime():
@@ -60,6 +69,13 @@ def test_num_factors():
     assert num_factors(28) == 6
     assert num_factors(33_907_329) == 15
     assert num_factors(76_576_500) == 576
+
+
+def test_greatest_common_factors():
+    assert greatest_common_factor(0, 0) == 0
+    assert greatest_common_factor(3_293_092, 0) == 3_293_092
+    assert greatest_common_factor(48, 18) == 6
+    assert greatest_common_factor(42, 56) == 14
 
 
 def test_is_amicable():
