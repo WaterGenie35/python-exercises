@@ -1,0 +1,12 @@
+def solution():
+    """
+    Solution to Project Euler problem
+    https://projecteuler.net/problem=
+
+    prompt
+    """
+    pass
+
+
+def test_solution():
+    pass

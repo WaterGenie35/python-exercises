@@ -1,0 +1,13 @@
+def function_name():
+    """
+    Solution to LeetCode problem
+    neetcode_link
+    leetcode_link
+
+    prompt
+    """
+    pass
+
+
+def test_solution():
+    pass
