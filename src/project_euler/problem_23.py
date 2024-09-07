@@ -31,7 +31,7 @@ def sum_of_non_sum_of_two_abundants():
             if sum_of_abundants > 20_161:
                 break
             non_sum_of_two_abundants[sum_of_abundants] = False
-    return sum(i for i in range(1, 20_161) if non_sum_of_two_abundants[i])
+    return sum(i for i in range(1, 20_161 + 1) if non_sum_of_two_abundants[i])
 
 
 def abundant_numbers_lte(n: int) -> List[int]:
