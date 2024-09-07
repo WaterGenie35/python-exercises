@@ -7,6 +7,7 @@ from utils.math import (
     is_prime,
     nth_prime,
     num_factors,
+    num_of_digits,
     primes_lte,
 )
 
@@ -91,6 +92,13 @@ def test_choose():
     assert choose(4, 2) == 6
     assert choose(235, 1) == 235
     assert choose(35, 17) == 4_537_567_650
+
+
+def test_num_of_digits():
+    assert num_of_digits(0) == 1
+    assert num_of_digits(9) == 1
+    assert num_of_digits(123_456) == 6
+    assert num_of_digits(-9_004) == 4
 
 
 def test_sum_of_digits():

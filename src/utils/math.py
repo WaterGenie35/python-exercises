@@ -1,3 +1,4 @@
+from math import log10
 from typing import List
 
 from utils.prime_table import PRIMES
@@ -133,6 +134,12 @@ def choose(n: int, k: int) -> int:
     for i in range(1, bound):
         product *= (n + 1.0 - i) / i
     return round(product)
+
+
+def num_of_digits(n: int) -> int:
+    if n == 0:
+        return 1
+    return 1 + int(log10(abs(n)))
 
 
 def sum_of_digits(n: int) -> int:
