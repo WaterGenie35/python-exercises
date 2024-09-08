@@ -1,4 +1,4 @@
-from utils.string import humanize_number, is_palindrome
+from utils.string import characters_frequency, humanize_number, is_palindrome
 
 
 def test_is_palindrome():
@@ -33,3 +33,9 @@ def test_humanize_number():
     assert humanize_number(3_140_020_017_050, short_powers_step) == (
         "three million, one hundred and forty thousand, and twenty million, seventeen thousand, and fifty"
     )
+
+
+def test_characters_frequency():
+    assert characters_frequency("") == {}
+    assert characters_frequency("foo") == {"f": 1, "o": 2}
+    assert characters_frequency("foo bar baz") == {"f": 1, "o": 2, " ": 2, "b": 2, "a": 2, "r": 1, "z": 1}

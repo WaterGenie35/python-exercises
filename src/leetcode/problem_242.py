@@ -1,3 +1,6 @@
+from utils.string import characters_frequency
+
+
 def is_anagram(s: str, t: str) -> bool:
     """
     Solution to Project Euler problem
@@ -11,13 +14,7 @@ def is_anagram(s: str, t: str) -> bool:
     if len(s) != len(t):
         return False
 
-    char_freq = {}
-    for char in s:
-        if char in char_freq:
-            char_freq[char] += 1
-        else:
-            char_freq[char] = 1
-
+    char_freq = characters_frequency(s)
     pair_freq = {}
     for char in t:
         if char not in char_freq:

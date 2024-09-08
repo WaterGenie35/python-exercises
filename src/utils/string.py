@@ -120,3 +120,13 @@ def humanize_number(n: int, powers_step: Dict[int, str] = HUMANIZE_POWERS_STEP) 
     non_last_parts = ", ".join(parts[:-1])
     last_part = parts[-1]
     return f"{non_last_parts}, and {last_part}"
+
+
+def characters_frequency(s: str) -> Dict[str, int]:
+    freq = {}
+    for char in s:
+        if char in freq:
+            freq[char] += 1
+        else:
+            freq[char] = 1
+    return freq
