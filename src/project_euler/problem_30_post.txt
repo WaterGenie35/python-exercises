@@ -1,0 +1,19 @@
+TODO: proof? some logarithm? simplification (i.e. compute k' directly)?
+
+For any number $n$ with $k$ digits, the maximum sum of its digits to the $p^{\text{th}}$ power is $k\times9^{p}$ (when all $k$ digits are $9$'s).
+So we can improve the upper bound if there's a $k'$ beyond which the maximum sum of $k'+1$ digits to the $p^{\text{th}}$ power has strictly less than $k'+1$ digits.
+
+[t1]E.g. for $p=4$, $9^{4} = 6,561$:
+
+[t2] Digits | Max sum of digits^4
+[t2]-------- ---------------------
+[t2]    1   |   6561 (4 digits)
+[t2]    2   |  13122 (5 digits)
+[t2]    3   |  19683 (5 digits)
+[t2]    4   |  26244 (5 digits)
+[t2]    5   |  32805 (5 digits)
+[t2]    6   |  39366 (5 digits)     $\implies k'=5$
+
+[t1] And we can stop the search at 32805.
+
+We can find the upper bound the same way for $p=5$ for this problem.
