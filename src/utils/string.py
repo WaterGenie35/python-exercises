@@ -1,5 +1,7 @@
 from typing import Dict
 
+UNIT_SEPARATOR = chr(31)
+
 
 def is_palindrome(s: str) -> bool:
     return s == s[::-1]
