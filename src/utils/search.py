@@ -11,7 +11,6 @@ def binary_search(sorted_list: List[int], target: int) -> Nullable[int]:
     tail = len(sorted_list) - 1
     while head < tail - 1:
         mid = (head + tail) // 2
-        # print(f"{head}\t{mid}\t{tail}")
         if sorted_list[mid] == target:
             return mid
         if sorted_list[mid] < target:
