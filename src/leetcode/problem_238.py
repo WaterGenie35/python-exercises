@@ -9,7 +9,7 @@ def product_except_self(nums: List[int]) -> List[int]:
 
     Given an integer array nums, return an array output where output[i] is the
     product of all the elements of nums except nums[i].
-    Solve in O(n) and without using division.
+    Solve in O(n) time and without using division.
     """
     product_from_left = [1] * len(nums)
     product_from_left[0] = nums[0]
