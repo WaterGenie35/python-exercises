@@ -22,7 +22,6 @@ def two_sum(nums: List[int], target: int) -> List[int]:
             continue
         complement_index[complement] = [i]
 
-    print(complement_index)
     for i, num in enumerate(nums):
         if num in complement_index:
             j = complement_index[num][0]
