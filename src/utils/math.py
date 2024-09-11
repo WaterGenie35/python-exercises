@@ -1,3 +1,4 @@
+from collections.abc import Iterator
 from math import log10
 from typing import List
 
@@ -33,6 +34,18 @@ def nth_prime(n: int) -> int:
         if is_prime(head):
             i += 1
     return head
+
+
+def generate_primes() -> Iterator[int]:
+    yield 2
+    yield 3
+    head = 5
+    while True:
+        if is_prime(head):
+            yield head
+        if is_prime(head + 2):
+            yield head + 2
+        head += 6
 
 
 def primes_lte(n: int) -> List[int]:
