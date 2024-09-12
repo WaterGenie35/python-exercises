@@ -162,3 +162,25 @@ def sum_of_digits(n: int) -> int:
         s += remaining % 10
         remaining //= 10
     return s
+
+
+def is_permutation(a: int, b: int) -> bool:
+    digits_freq = {}
+    remaining_a = a
+    while remaining_a > 0:
+        digit = remaining_a % 10
+        remaining_a //= 10
+        if digit in digits_freq:
+            digits_freq[digit] += 1
+        else:
+            digits_freq[digit] = 1
+    remaining_b = b
+    while remaining_b > 0:
+        digit = remaining_b % 10
+        remaining_b //= 10
+        if digit not in digits_freq:
+            return False
+        digits_freq[digit] -= 1
+        if digits_freq[digit] < 0:
+            return False
+    return True

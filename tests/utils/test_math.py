@@ -4,6 +4,7 @@ from utils.math import (
     factors_of,
     greatest_common_factor,
     is_amicable,
+    is_permutation,
     is_prime,
     nth_prime,
     num_factors,
@@ -105,3 +106,8 @@ def test_sum_of_digits():
     assert sum_of_digits(0) == 0
     assert sum_of_digits(6) == 6
     assert sum_of_digits(1_023_009) == 15
+
+
+def test_is_permutation():
+    assert is_permutation(1487, 4817)
+    assert is_permutation(10013, 11300)
