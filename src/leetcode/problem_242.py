@@ -3,7 +3,7 @@ from utils.string import characters_frequency
 
 def is_anagram(s: str, t: str) -> bool:
     """
-    Solution to Project Euler problem
+    Solution to Project Euler problem 242
     https://neetcode.io/problems/is-anagram
     https://leetcode.com/problems/valid-anagram/
 

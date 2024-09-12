@@ -3,7 +3,7 @@ from typing import List
 
 def longest_consecutive(nums: List[int]) -> int:
     """
-    Solution to LeetCode problem
+    Solution to LeetCode problem 128
     https://neetcode.io/problems/longest-consecutive-sequence
     https://leetcode.com/problems/longest-consecutive-sequence/
 

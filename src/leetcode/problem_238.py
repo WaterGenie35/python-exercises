@@ -3,7 +3,7 @@ from typing import List
 
 def product_except_self(nums: List[int]) -> List[int]:
     """
-    Solution to LeetCode problem
+    Solution to LeetCode problem 238
     https://neetcode.io/problems/products-of-array-discluding-self
     https://leetcode.com/problems/product-of-array-except-self/
 

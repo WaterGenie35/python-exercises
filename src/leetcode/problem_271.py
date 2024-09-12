@@ -6,7 +6,7 @@ from utils.string import UNIT_SEPARATOR
 
 def encode(strs: List[str]) -> str:
     """
-    Solution to LeetCode problem
+    Solution to LeetCode problem 271
     https://neetcode.io/problems/string-encode-and-decode
     https://leetcode.com/problems/encode-and-decode-strings/
 

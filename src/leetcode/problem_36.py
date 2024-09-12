@@ -3,7 +3,7 @@ from typing import List
 
 def is_valid_sudoku(board: List[List[str]]) -> bool:
     """
-    Solution to LeetCode problem
+    Solution to LeetCode problem 36
     https://neetcode.io/problems/valid-sudoku
     https://leetcode.com/problems/valid-sudoku/
 
