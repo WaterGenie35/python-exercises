@@ -1,4 +1,5 @@
 from collections.abc import Iterator
+from itertools import permutations
 from math import log10
 from typing import List
 
@@ -198,3 +199,15 @@ def is_pandigital(n: int, up_to_num_digits_of_n: bool = False, start: int = 1, e
         remaining //= 10
 
     return all(digit_freq == 1 for digit, digit_freq in freq.items())
+
+
+def generate_pandigitals(start: int = 1, end: int = 9, reversed: bool = False) -> Iterator[int]:
+    num_digits = end - start + 1
+    digits = range(end, start - 1, -1) if reversed else range(start, end + 1)
+    for perm in permutations(digits):
+        num = 0
+        remaining_digits = num_digits
+        for digit in perm:
+            num += digit * (10 ** (remaining_digits - 1))
+            remaining_digits -= 1
+        yield num

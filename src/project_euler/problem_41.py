@@ -1,4 +1,4 @@
-from utils.math import is_pandigital, primes_lte
+from utils.math import generate_pandigitals, is_pandigital, is_prime, primes_lte
 
 
 def solution():
@@ -12,14 +12,13 @@ def solution():
     print(largest_pandigital_prime())
 
 
-# def test_solution():
-#     assert largest_pandigital_prime() == 7_652_413
+def test_solution():
+    assert largest_pandigital_prime() == 7_652_413
 
 
-# TODO: generate from digits instead of going through primes
 def largest_pandigital_prime():
-    primes = primes_lte(987_654_321)
-    for prime in reversed(primes):
-        if is_pandigital(prime, up_to_num_digits_of_n=True):
-            return prime
+    for num_digits in range(9, 0, -1):
+        for pandigital in generate_pandigitals(start=1, end=num_digits, reversed=True):
+            if is_prime(pandigital):
+                return pandigital
     return None
