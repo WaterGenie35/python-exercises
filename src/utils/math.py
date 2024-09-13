@@ -184,3 +184,17 @@ def is_permutation(a: int, b: int) -> bool:
         if digits_freq[digit] < 0:
             return False
     return True
+
+
+def is_pandigital(n: int, up_to_num_digits_of_n: bool = False, start: int = 1, end: int = 9) -> bool:
+    last_digit = num_of_digits(n) if up_to_num_digits_of_n else end
+    freq = {d: 0 for d in range(start, last_digit + 1)}
+    remaining = n
+    while remaining > 0:
+        digit = remaining % 10
+        if digit < start or digit > last_digit or freq[digit] == 1:
+            return False
+        freq[digit] = 1
+        remaining //= 10
+
+    return all(digit_freq == 1 for digit, digit_freq in freq.items())

@@ -4,6 +4,7 @@ from utils.math import (
     factors_of,
     greatest_common_factor,
     is_amicable,
+    is_pandigital,
     is_permutation,
     is_prime,
     nth_prime,
@@ -111,3 +112,11 @@ def test_sum_of_digits():
 def test_is_permutation():
     assert is_permutation(1487, 4817)
     assert is_permutation(10013, 11300)
+
+
+def test_is_pandigital():
+    assert is_pandigital(4_132, start=1, end=4)
+    assert is_pandigital(7_652_413, up_to_num_digits_of_n=True)
+
+    assert not is_pandigital(4_132, start=0, end=4)
+    assert not is_pandigital(7_652_413, start=1, end=9)

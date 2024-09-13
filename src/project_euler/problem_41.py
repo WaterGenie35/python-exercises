@@ -1,4 +1,4 @@
-from utils.math import num_of_digits, primes_lte
+from utils.math import is_pandigital, primes_lte
 
 
 def solution():
@@ -20,19 +20,6 @@ def solution():
 def largest_pandigital_prime():
     primes = primes_lte(987_654_321)
     for prime in reversed(primes):
-        if is_pandigital(prime):
+        if is_pandigital(prime, up_to_num_digits_of_n=True):
             return prime
     return None
-
-
-def is_pandigital(n: int) -> bool:
-    num_digits = num_of_digits(n)
-    remaining = n
-    digits = set()
-    while remaining > 0:
-        digit = remaining % 10
-        if digit > num_digits or digit == 0 or digit in digits:
-            return False
-        digits.add(digit)
-        remaining //= 10
-    return True

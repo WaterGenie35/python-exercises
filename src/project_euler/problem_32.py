@@ -1,4 +1,4 @@
-from typing import List
+from utils.math import is_pandigital
 
 
 def solution():
@@ -27,19 +27,8 @@ def sum_of_products_with_pandigital_identity() -> int:
             product = term_1 * term_2
             if product > max_term:
                 break
-            if product not in products and is_pandigital([term_1, term_2, product]):
+            concatenated = int("".join([str(term_1), str(term_2), str(product)]))
+            if product not in products and is_pandigital(concatenated):
                 products.add(product)
                 sum_of_products += product
     return sum_of_products
-
-
-def is_pandigital(nums: List[int]) -> bool:
-    joined_num = "".join([str(num) for num in nums])
-    if len(joined_num) != 9:
-        return False
-    digits = {str(d): 0 for d in range(1, 10)}
-    for char in joined_num:
-        if char == "0" or digits[char] == 1:
-            return False
-        digits[char] = 1
-    return True
