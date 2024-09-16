@@ -21,6 +21,17 @@ class ListNode:
             return True
         return self.next == other.next
 
+    def to_list(self) -> List[int]:
+        list = []
+        head = self
+        while head is not None:
+            list.append(head.val)
+            head = head.next
+        return list
+
+    def __str__(self) -> str:
+        return str(self.to_list())
+
     @staticmethod
     def from_list(values: List[int]) -> Nullable['ListNode']:
         head = None
