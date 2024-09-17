@@ -1,6 +1,5 @@
+from utils.list import ListNode
 from utils.typing import Nullable
-
-from leetcode.list import ListNode
 
 
 def reverse_list(head: Nullable[ListNode]) -> Nullable[ListNode]:

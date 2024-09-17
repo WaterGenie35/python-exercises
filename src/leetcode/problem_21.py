@@ -1,6 +1,5 @@
+from utils.list import ListNode
 from utils.typing import Nullable
-
-from leetcode.list import ListNode
 
 
 def merge_two_lists(list1: Nullable[ListNode], list2: Nullable[ListNode]) -> Nullable[ListNode]:
