@@ -5,3 +5,6 @@ __pycache__/
 
 # Dev
 .vscode/settings.json
+
+# Project Euler
+src/project_euler/
