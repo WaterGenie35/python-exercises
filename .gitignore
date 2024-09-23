@@ -7,5 +7,8 @@ __pycache__/
 .vscode/settings.json
 
 # Project Euler
+# Among 3-digits, still include 100
 src/project_euler/problem_1[1-9]0.py
 src/project_euler/problem_[1-9][0-9][1-9].py
+# Approximation to ignoring 4-digits or more
+src/project_euler/problem_*[0-9][0-9][0-9].py
