@@ -8,6 +8,8 @@ Just some generic programming exercises using Python.
 
   ![Image of the project euler progress badge](https://projecteuler.net/profile/WaterGenie35.png)
 
+  - Only include solutions up to problem 100 to comply with the project euler rules.
+
 - [LeetCode](https://leetcode.com/problemset/)
   - [NeetCode](https://neetcode.io/practice) subset
 

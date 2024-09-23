@@ -1,0 +1,8 @@
+https://projecteuler.net/action=redirect;post_id=433924
+
+For any grid of dimension $w$ by $h$,
+- there are $w + h$ times in which we must choose between moving right or down
+- out of these, we must have $w$ right moves (forcing $h$ down moves and vice versa)
+Choosing either way is equivalent, so we can min to simplify:
+
+$\text{choose}(w + h, \text{min}(w, h))$

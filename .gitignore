@@ -7,4 +7,5 @@ __pycache__/
 .vscode/settings.json
 
 # Project Euler
-src/project_euler/
+src/project_euler/problem_1[1-9]0.py
+src/project_euler/problem_[1-9][0-9][1-9].py
