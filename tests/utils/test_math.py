@@ -112,6 +112,7 @@ def test_sum_of_digits():
 def test_is_permutation():
     assert is_permutation(1487, 4817)
     assert is_permutation(10013, 11300)
+    assert not is_permutation(142858, 285714)
 
 
 def test_is_pandigital():
