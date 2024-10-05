@@ -1,4 +1,3 @@
-from project_euler.problem_16 import sum_of_digits
 from utils.math import (
     choose,
     factors_of,
@@ -11,6 +10,7 @@ from utils.math import (
     num_factors,
     num_of_digits,
     primes_lte,
+    sum_of_digits,
 )
 
 

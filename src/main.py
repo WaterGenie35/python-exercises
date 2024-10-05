@@ -20,7 +20,7 @@ def main():
         problem_group = (args.problem_number - 1) // 50
         group_start = (50 * problem_group) + 1
         group_end = group_start + 50 - 1
-        group_dir = f"{group_start}-{group_end}"
+        group_dir = f"problems_{group_start}_to_{group_end}"
         module_name = f"{args.exercise}.{group_dir}.problem_{args.problem_number}"
     if importlib.util.find_spec(module_name):
         problem = import_module(module_name)

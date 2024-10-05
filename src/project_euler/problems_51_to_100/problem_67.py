@@ -1,7 +1,7 @@
 import os
 from typing import List
 
-from project_euler.problem_18 import max_path_in_triangle
+from project_euler.problems_1_to_50.problem_18 import max_path_in_triangle
 
 
 def solution():
