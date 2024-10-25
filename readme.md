@@ -4,12 +4,6 @@ Just some generic programming exercises using Python.
 
 ## Exercises
 
-- [Project Euler](https://projecteuler.net/archives)
-
-  ![Image of the project euler progress badge](https://projecteuler.net/profile/WaterGenie35.png)
-
-  - Only include solutions up to problem 100 to comply with the project euler rules.
-
 - [LeetCode](https://leetcode.com/problemset/)
   - [NeetCode](https://neetcode.io/practice) subset
 
@@ -20,15 +14,6 @@ Just some generic programming exercises using Python.
 ```shell
 conda env create -f environment.yml
 conda activate python-exercises
-```
-
-## Run
-
-```shell
-python src/main.py EXERCISE PROBLEM_NUMBER
-
-# Example
-python src/main.py project_euler 1
 ```
 
 ## Development
