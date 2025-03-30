@@ -6,6 +6,7 @@ Just some generic programming exercises using Python.
 
 - [LeetCode](https://leetcode.com/problemset/)
   - [NeetCode](https://neetcode.io/practice) subset
+- [ProjectEuler](https://projecteuler.net/archives)
 
 ## Environment
 
@@ -27,6 +28,10 @@ conda env export --no-builds | grep -v "prefix" > environment.yml
 ### Testing
 ```shell
 pytest
+```
+
+```shell
+python src/main.py project_euler {problem number}
 ```
 
 ### Documenting
