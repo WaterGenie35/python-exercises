@@ -3,7 +3,7 @@ from typing import List
 
 def single_number(nums: List[int]) -> int:
     """
-    Solution to LeetCode problem
+    Solution to LeetCode problem 136
     https://neetcode.io/problems/single-number
     https://leetcode.com/problems/single-number/
     """

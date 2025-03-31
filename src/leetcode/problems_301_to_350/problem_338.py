@@ -3,7 +3,7 @@ from typing import List
 
 def count_bits(n: int) -> List[int]:
     """
-    Solution to LeetCode problem
+    Solution to LeetCode problem 338
     https://neetcode.io/problems/counting-bits
     https://leetcode.com/problems/counting-bits/
     """

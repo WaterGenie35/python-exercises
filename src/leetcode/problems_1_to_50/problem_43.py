@@ -4,7 +4,7 @@ STRING_FROM = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
 def multiply(num1: str, num2: str) -> str:
     """
-    Solution to LeetCode problem
+    Solution to LeetCode problem 43
     https://neetcode.io/problems/multiply-strings
     https://leetcode.com/problems/multiply-strings/
 

@@ -9,7 +9,7 @@ class Interval:
 
 def can_attend_meetings(intervals: List[Interval]) -> bool:
     """
-    Solution to LeetCode problem
+    Solution to LeetCode problem 252
     https://neetcode.io/problems/meeting-schedule
     https://leetcode.com/problems/meeting-rooms/
     """

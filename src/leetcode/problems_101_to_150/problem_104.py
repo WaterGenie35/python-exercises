@@ -4,7 +4,7 @@ from utils.typing import Nullable
 
 def max_depth(root: Nullable[TreeNode]) -> int:
     """
-    Solution to LeetCode problem
+    Solution to LeetCode problem 104
     https://neetcode.io/problems/depth-of-binary-tree
     https://leetcode.com/problems/maximum-depth-of-binary-tree/
 

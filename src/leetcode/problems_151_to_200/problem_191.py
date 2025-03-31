@@ -1,6 +1,6 @@
 def hamming_weight(n: int) -> int:
     """
-    Solution to LeetCode problem
+    Solution to LeetCode problem 191
     https://neetcode.io/problems/number-of-one-bits
     https://leetcode.com/problems/number-of-1-bits/
     """
