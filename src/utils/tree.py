@@ -1,3 +1,5 @@
+from collections.abc import Iterator
+
 from utils.typing import Nullable
 
 
@@ -28,3 +30,36 @@ class TreeNode:
             other_stack.append(other_head.right)
 
         return len(self_stack) == len(other_stack)
+
+
+def pre_order_traversal(root: Nullable[TreeNode]) -> Iterator[TreeNode]:
+    # stack = [root]
+    # while len(stack) > 0:
+    #     node = stack.pop()
+    #     if node is None:
+    #         continue
+
+    #     yield node
+    #     stack.append(node.right)
+    #     stack.append(node.left)
+    if root is None:
+        return
+    yield root
+    yield from pre_order_traversal(root.left)
+    yield from pre_order_traversal(root.right)
+
+
+def post_order_traversal(root: Nullable[TreeNode]) -> Iterator[TreeNode]:
+    if root is None:
+        return
+    yield from post_order_traversal(root.left)
+    yield from post_order_traversal(root.right)
+    yield root
+
+
+def in_order_traversal(root: Nullable[TreeNode]) -> Iterator[TreeNode]:
+    if root is None:
+        return
+    yield from in_order_traversal(root.left)
+    yield root
+    yield from in_order_traversal(root.right)
