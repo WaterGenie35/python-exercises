@@ -35,4 +35,4 @@ python src/main.py project_euler {problem number}
 ```
 
 ### Documenting
-- Save raw project euler post content before submitting since they are non-permanent.
+- Save raw project euler post content before submitting since the online thread non-permanent.
