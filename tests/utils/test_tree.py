@@ -26,3 +26,14 @@ def test_in_order_traversal():
     actual_order = list(in_order_traversal(TEST_TREE))
     for i in range(len(actual_order)):
         assert expected_order[i] == actual_order[i].val
+
+
+def test_from_list():
+    list1 = []
+    assert TreeNode.from_list(list1) is None
+    list2 = [5]
+    assert TreeNode.from_list(list2) == TreeNode(5)
+    list3 = [5, 5, 2, 4, None, 6, 8, None, None, None, None, None, None, 14]
+    assert TreeNode.from_list(list3) == TreeNode(
+        5, TreeNode(5, TreeNode(4)), TreeNode(2, TreeNode(6), TreeNode(8, TreeNode(14)))
+    )

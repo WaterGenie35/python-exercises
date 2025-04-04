@@ -1,4 +1,5 @@
 from collections.abc import Iterator
+from typing import List, Self
 
 from utils.typing import Nullable
 
@@ -30,6 +31,27 @@ class TreeNode:
             other_stack.append(other_head.right)
 
         return len(self_stack) == len(other_stack)
+
+    @staticmethod
+    def from_list(values: List[int | None]) -> Self:
+        nodes = [None]
+        for node_index, value in enumerate(values):
+            if value is None:
+                nodes.append(None)
+                continue
+            parent_index = (node_index - 1) // 2
+            node = TreeNode(value)
+            if node_index == 0:
+                nodes[0] = node
+            else:
+                parent_node = nodes[parent_index]
+                is_left = node_index % 2 == 1
+                if is_left:
+                    parent_node.left = node
+                else:
+                    parent_node.right = node
+                nodes.append(node)
+        return nodes[0]
 
 
 def pre_order_traversal(root: Nullable[TreeNode]) -> Iterator[TreeNode]:
